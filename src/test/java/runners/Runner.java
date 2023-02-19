@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         features = "src/test/java/features/alugar_filme.feature",
         glue = "steps",
         //tags = "@regressivo,~@ignore",
-        plugin = "pretty",
+        plugin = {"pretty", "html: target/report-html"},
         monochrome = true,
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         dryRun = false
