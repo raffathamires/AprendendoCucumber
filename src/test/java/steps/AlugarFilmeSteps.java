@@ -2,6 +2,7 @@ package steps;
 
 import br.com.raffathamires.entidades.Filme;
 import br.com.raffathamires.entidades.NotaAluguel;
+import br.com.raffathamires.entidades.TipoAluguel;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
@@ -11,7 +12,6 @@ import utils.DateUtils;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 public class AlugarFilmeSteps {
@@ -20,7 +20,7 @@ public class AlugarFilmeSteps {
     private AluguelService aluguel = new AluguelService();
     private NotaAluguel notaAluguel;
     private String erro;
-    private String tipoAluguel;
+    private TipoAluguel tipoAluguel = TipoAluguel.COMUM;
 
     @Dado("um filme com estoque de {int} unidades")
     public void umFilmeComEstoqueDeUnidades(Integer int1) {
@@ -57,7 +57,7 @@ public class AlugarFilmeSteps {
 
     @Dado("^que o tipo do aluguel seja (.*)$")
     public void queOTipoDoAluguelSejaExtendido(String tipo) {
-        tipoAluguel = tipo;
+        tipoAluguel = tipo.equals("semanal")? TipoAluguel.SEMANAL: tipo.equals("extendido")? TipoAluguel.EXTENDIDO: TipoAluguel.COMUM;
     }
     @Então("a data de entrega será em {int} dias")
     public void aDataDeEntregaSeráEmDias(Integer int1) {
