@@ -19,20 +19,17 @@ Cenário: Não deve alugar filme sem estoque
   Então não será possível por falta de estoque
   E o estoque do filme será 0 unidade
 
-Cenário: Deve dar condições especiais para categoria extendida
-  Dado um filme com estoque de 2 unidades
-  E que o preço do aluguel seja R$ 4
-  E que o tipo do aluguel seja extendido
-  Quando alugar
-  Então o preço do aluguel será R$ 8
-  E a data de entrega será em 3 dias
-  E a pontuação recebida será de 2 pontos
+Esquema do Cenario: Deve dar condições especiais para categoria extendida
+    Dado um filme com estoque de 2 unidades
+    E que o preço do aluguel seja R$ <preco>
+    E que o tipo do aluguel seja <tipo>
+    Quando alugar
+    Então o preço do aluguel será R$ <valor>
+    E a data de entrega será em <qtdDias> dias
+    E a pontuação recebida será de <pontuacao> pontos
 
-Cenário: Deve alugar para categoria comum
-  Dado um filme com estoque de 2 unidades
-  E que o preço do aluguel seja R$ 4
-  E que o tipo do aluguel seja comum
-  Quando alugar
-  Então o preço do aluguel será R$ 4
-  E a data de entrega será em 1 dias
-  E a pontuação recebida será de 1 pontos
+Exemplos:
+  | preco |   tipo    | valor | qtdDias | pontuacao |
+  |   4   | extendido |   8   |    3    |     2     |
+  |   4   |   comum   |   4   |    1    |     1     |
+  |  5    |  semanal  |  15   |    7    |     3     |
