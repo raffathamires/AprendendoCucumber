@@ -1,8 +1,8 @@
 package steps;
 
-import br.com.raffathamires.entidades.Filme;
-import br.com.raffathamires.entidades.NotaAluguel;
-import br.com.raffathamires.entidades.TipoAluguel;
+import entidades.Filme;
+import entidades.NotaAluguel;
+import entidades.TipoAluguel;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;

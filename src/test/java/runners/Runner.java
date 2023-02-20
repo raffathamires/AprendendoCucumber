@@ -6,9 +6,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/java/features/alugar_filme.feature",
+        features = "src/test/java/features/inserir_conta.feature",
         glue = "steps",
-        //tags = "@regressivo,~@ignore",
+        tags = "not @ignore",
         plugin = {"pretty", "html: target/report-html"},
         monochrome = true,
         snippets = CucumberOptions.SnippetType.CAMELCASE,

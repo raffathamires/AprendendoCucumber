@@ -1,11 +1,9 @@
 package servicos;
 
-import br.com.raffathamires.entidades.Filme;
-import br.com.raffathamires.entidades.NotaAluguel;
-import br.com.raffathamires.entidades.TipoAluguel;
+import entidades.Filme;
+import entidades.NotaAluguel;
+import entidades.TipoAluguel;
 import utils.DateUtils;
-
-import java.util.Calendar;
 
 public class AluguelService {
     public NotaAluguel alugar(Filme filme, TipoAluguel tipo) {
