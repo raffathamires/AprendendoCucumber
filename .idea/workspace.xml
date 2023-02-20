@@ -4,20 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3fc286c7-1651-4237-b36a-63ea2d77909c" name="Changes" comment="Add relatorio">
-      <change afterPath="$PROJECT_DIR$/chromedriver_win32/LICENSE.chromedriver" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chromedriver_win32/chromedriver.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/features/inserir_conta.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/steps/InserirContasSteps.java" afterDir="false" />
+    <list default="true" id="3fc286c7-1651-4237-b36a-63ea2d77909c" name="Changes" comment="Cenarios aplicacao Seu Barriga">
       <change beforePath="$PROJECT_DIR$/ target/report-html" beforeDir="false" afterPath="$PROJECT_DIR$/ target/report-html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/raffathamires/entidades/Filme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entidades/Filme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/raffathamires/entidades/NotaAluguel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entidades/NotaAluguel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/raffathamires/entidades/TipoAluguel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entidades/TipoAluguel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servicos/AluguelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servicos/AluguelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/alugar_filme.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/alugar_filme.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/aprender_cucumber.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/aprender_cucumber.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/inserir_conta.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/inserir_conta.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runners/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/Runner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/steps/AlugarFilmeSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/AlugarFilmeSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/InserirContasSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/InserirContasSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676839446890</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Cenarios aplicacao Seu Barriga">
+      <created>1676903831476</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676903831477</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -221,7 +223,8 @@
     <MESSAGE value="Esquema de Cenario" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Add relatorio" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add relatorio" />
+    <MESSAGE value="Cenarios aplicacao Seu Barriga" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cenarios aplicacao Seu Barriga" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

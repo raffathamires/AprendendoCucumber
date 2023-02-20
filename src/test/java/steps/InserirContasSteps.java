@@ -1,13 +1,21 @@
 package steps;
 
 import io.cucumber.java.After;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
+import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.io.File;
+import java.io.IOException;
 
 public class InserirContasSteps {
 
@@ -52,27 +60,28 @@ public class InserirContasSteps {
     public void seleciono_salvar() {
         driver.findElement(By.tagName("button")).click();
     }
-    @Então("a conta é inserida com sucesso")
-    public void a_conta_é_inserida_com_sucesso() {
-        String texto = driver.findElement(By.xpath("//div[@class='alert alert-success']")).getText();
-        Assert.assertEquals("Conta adicionada com sucesso!", texto);
+
+    @Entao("recebo a mensagem {string}")
+    public void receboAMensagem(String arg1){
+        String texto = driver.findElement(By.xpath("//div[starts-with(@class, 'alert alert-')]")).getText();
+        Assert.assertEquals(arg1, texto);
     }
 
-    @Então("sou notificado que o nome da conta é obrigatório")
-    public void souNotificarQueONomeDaContaÉObrigatório() {
-        String texto = driver.findElement(By.xpath("//div[@class='alert alert-danger']")).getText();
-        Assert.assertEquals("Informe o nome da conta", texto);
+    @After(order = 1, value = "not @unitarios")
+    public void capturaDeTela(Scenario cenario){
+        File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        try {
+            FileUtils.copyFile(file, new File("target/capturasDeTela/"+cenario.getId()+".jpg"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
-    @Então("sou notificado que já existe uma conta com esse nome")
-    public void souNotificadoQueJáExisteUmaContaComEsseNome() {
-        String texto = driver.findElement(By.xpath("//div[@class='alert alert-danger']")).getText();
-        Assert.assertEquals("Já existe uma conta com esse nome!", texto);
-    }
-
-    @After
+    @After(order = 0, value = "not @unitarios")
     public void fecharNavegador() {
         driver.quit();
     }
+
 
 }
